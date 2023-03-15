@@ -41,11 +41,5 @@ void Log::log_error(std::string input) {
 }
 
 void Log::log_fatal(std::string input) {
-    if(log_verbosity == 1) {
-        std::cout << "FATAL ERROR: " << input.at(0) << std::endl;
-    } else if(log_verbosity == 2) {
-        for(int i = 0; i < input.size(); i++) {
-            std::cout << "FATAL ERROR: " << input.at(i) << std::endl; 
-        }
-    }
+    std::cout << "FATAL ERROR: " << input << std::endl; 
 }
