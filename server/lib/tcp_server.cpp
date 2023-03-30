@@ -15,6 +15,8 @@ TCPServer::TCPServer(std::string _address, int _port, int _logging) {
     address = _address;
     port = _port;
     logger = new Log(_logging); 
+
+    logger->log_info("Created new server.");
 }
 
 TCPServer::~TCPServer() {
@@ -28,6 +30,8 @@ int TCPServer::startServer() {
         logger->log_fatal("FAILED TO OPEN SOCKET");
         return 1;
     }
+
+    logger->log_info("Starting server...");
 
     return 0;
 }
