@@ -19,6 +19,7 @@ public:
     int startServer();
     void closeServer();
 
+    void startListen();
 private:
     std::string address;
     int port;
@@ -32,7 +33,6 @@ private:
     Log *logger;
 
     //Private Functions
-    void startListen();
     void acceptConnection(int &acpt_new_socket);
     std::string buildResponse();
     void sendResponse(); 
