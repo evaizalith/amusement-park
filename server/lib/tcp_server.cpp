@@ -31,6 +31,11 @@ int TCPServer::startServer() {
         return 1;
     }
 
+    if(bind(m_socket, (sockaddr *)&socketAddress, socketAddress_len) < 0) {
+        logger->log_fatal("FAILED TO BIND SOCKET TO ADDRESS");
+        return 1;
+    }
+
     logger->log_info("Starting server...");
 
     return 0;
@@ -88,7 +93,7 @@ void TCPServer::acceptConnection(int &acpt_new_socket) {
     if(acpt_new_socket < 0) {
         std::string error = "Failed to accept incoming connection from: ";
         error += inet_ntoa(socketAddress.sin_addr);
-        error += ", Port: ";
+        error += " : ";
         error += ntohs(socketAddress.sin_port);
         logger->log_error(error);
     }
