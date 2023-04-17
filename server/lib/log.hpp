@@ -11,7 +11,6 @@
 class Log {
 public:
     Log(int log_level) { log_verbosity = log_level; };
-    ~Log();
 
     //Pass array or vector of strings to both methods
     //If logging is verbose [log_verbosity = 2], all strings will be printed
@@ -19,6 +18,10 @@ public:
     void log_info(std::vector<std::string>);
     void log_error(std::vector<std::string>);
     void log_fatal(std::vector<std::string>);
+
+    void log_info(std::string);
+    void log_error(std::string);
+    void log_fatal(std::string);
 private:
     int log_verbosity;
 };

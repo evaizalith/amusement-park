@@ -19,8 +19,10 @@ int main(int argc, char** argv) {
     }
 
     TCPServer server = TCPServer("127.0.0.1", 1917, logging);
-
-    server.closeServer();
+    //If server starts successfully, listen
+    if (server.startServer() == 0) {
+        server.startListen();
+    }
 
     return 0;
 }

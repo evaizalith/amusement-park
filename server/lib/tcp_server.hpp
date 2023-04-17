@@ -5,6 +5,8 @@
 #include <thread>
 #include <vector>
 #include "log.hpp"
+#include <sys/socket.h>
+#include <arpa/inet.h>
 
 #ifndef GL2_LIB_TCPSERV
 #define GL2_LIB_TCPSERV
@@ -17,12 +19,23 @@ public:
     int startServer();
     void closeServer();
 
+    void startListen();
 private:
     std::string address;
     int port;
-    std::vector<std::thread> threads; 
+    int m_socket;
+    int new_socket;
 
-    Log *logger; 
+    long incoming_message;
+    struct sockaddr_in socketAddress;
+    unsigned int socketAddress_len;
+
+    Log *logger;
+
+    //Private Functions
+    void acceptConnection(int &acpt_new_socket);
+    std::string buildResponse();
+    void sendResponse(); 
 };
 
 #endif 

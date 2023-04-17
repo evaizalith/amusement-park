@@ -31,3 +31,15 @@ void Log::log_fatal(std::vector<std::string> input) {
         }
     }
 }
+
+void Log::log_info(std::string input) {
+    std::cout << input << std::endl;
+}
+
+void Log::log_error(std::string input) {
+    std::cout << "ERROR: " << input << std::endl; 
+}
+
+void Log::log_fatal(std::string input) {
+    std::cout << "FATAL ERROR: " << input << std::endl; 
+}
