@@ -29,19 +29,19 @@ server = http.createServer((req, res) => {
         case '/info':
             file += "parkInfo.html";
             break;
-        case 'checkout':
+        case '/checkout':
             file += "checkout.html";
             break;
-        case 'login':
+        case '/login':
             file += "login.html";
             break;
-        case 'rides':
+        case '/rides':
             file += "ridesExperience.html";
             break;
-        case 'signup':
+        case '/signup':
             file += "signup.html";
             break;
-        case 'tickets':
+        case '/tickets':
             file += "ticketsPasses.html";
             break;
         default:
