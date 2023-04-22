@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>W3.CSS Template</title>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href= "./styles/login.css">
+    <link rel="stylesheet" href= "./login.css">
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -20,9 +20,9 @@
 <div class="w3-top">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card w3-large">
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+<a id="Search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+    <a id="Cart" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
+    <a id="Login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
     
   </div>
 
@@ -32,11 +32,11 @@
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
-  <h1 class="w3-margin w3-jumbo">Geauga Lake 2</h1>
-  <p class="w3-xlarge">Login</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
+  <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
+  <p class="w3-xlarge">"If at first you don't succeed..."</p>
+  <button id="Tp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
+  <button id="Re" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
+  <button id="Pi" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
 </header>
 
 <body>
@@ -56,7 +56,7 @@
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="signupbtn">Sign up</button>
+    <button id="signup" type="button" class="signupbtn">Sign up</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
@@ -64,6 +64,47 @@
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge"></h1>
 </div>
+
+<script type="text/javascript">
+    document.getElementById("Tp").onclick = function () {
+        location.href = "localhost:8080/tickets";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Re").onclick = function () {
+        location.href = "localhost:8080/rides";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Pi").onclick = function () {
+        location.href = "localhost:8080/info";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Login").onclick = function () {
+        location.href = "localhost:8080/login";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Cart").onclick = function () {
+        location.href = "localhost:8080/checkout";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Search").onclick = function () {
+        location.href = "localhost:8080/search;
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("home").onclick = function () {
+        location.href = "localhost:8080/";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("signup").onclick = function () {
+    location.href = "localhost:8080/signup";
+    };
+</script>
 
 </body>
 </html>
