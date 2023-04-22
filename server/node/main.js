@@ -24,11 +24,11 @@ db.connect(function(err) {
 
 function addUser(visitor_id, password, email) {
     get_max = "SELECT max(user_id) FROM userAccounts";
-    max_id = db.query(get_max, function (err, result) {
+    max_id = JSON.stringify(db.query(get_max, function (err, result) {
         if (err) throw (err);
         console.log(result);
         return result; 
-    });
+    }));
 
     new_id = max_id + 1;
 
