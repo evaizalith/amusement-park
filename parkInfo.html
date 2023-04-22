@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>W3.CSS Template</title>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Accordion.css">
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -32,7 +33,7 @@
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
   <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
-  <p class="w3-xlarge">"If at first you don't succeed..."</p>
+  <p class="w3-xlarge">Park Info</p>
   <button id="Tp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
   <button id="Re" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
   <button id="Pi" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
@@ -40,97 +41,74 @@
 
 <!-- First Grid -->
 <div class="w3-row-padding  w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-center">
-    <img src= "./images/GeaugaLakeIsReal.jpg" 
-      style= "width: 900px;height:600px;">
-    </div>
 
-    <div class="w3-center">
-      <h1>The greatest in all things amusement and park!</h1>
-      <h4 class="w3-padding-16">Here at Geauga Lake 2, we have tons of rides, shops, and other attractions for you to choose from to spend your day at! Here are some of them now, and keep in mind that there are DEFINITELY more rides at the actual park! Because we TOTALLY have the budget for that!</h4>
-    </div>
-  </div>
-</div>
-
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-blue w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>You're text here</h1>
-      <h5 class="w3-padding-32">Your*</h5>
-    </div>
-
-    <div class="w3-third w3-center">
-          <img src= "https://cdn.britannica.com/95/166395-050-37165D6F/Roller-coaster-Six-Flags-Magic-Mountain-Valencia.jpg" 
-      style= "width:228px;height:228px;">
-    </div>
-  </div>
-</div>
-
-<!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-    <img src= "./images/bastard.png" 
-      style= "width:250px;height:300px;">
-    </div>
-
-    <div class="w3-twothird">
-      <h1>Rampaging Reagan</h1>
-      <h5 class="w3-padding-32">This thrilling roller coaster features thrills, chills, and trickle down economics! Jump in a lightning-fast roller coaster car and run away from 40th United States President Ronald Reagan as fast as you can before he defunds your community!</h5>
-    </div>
-  </div>
-</div>
-
-<!-- Fourth Grid -->
-<div class="w3-row-padding w3-light-blue w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1></h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-    </div>
-
-    <div class="w3-third w3-center">
-          <img src= "https://cdn.britannica.com/95/166395-050-37165D6F/Roller-coaster-Six-Flags-Magic-Mountain-Valencia.jpg" 
-      style= "width:228px;height:228px;">
-    </div>
-  </div>
-</div>
-
-<!-- Fifth Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-    <img src= "./images/mylifeislikeavideogame.jpg" 
-      style= "width:250px;height:300px;">
-    </div>
-
-    <div class="w3-twothird">
-      <h1>Literally just the Toadstool Cafe from that new Mario theme park at Universal Studios</h1>
-      <h5 class="w3-padding-32">Our marketing team has learned of a new, hardly-touched demographic of people: terminally online redditors. We have created a 1 to 1 copy of the actual Toadstool Cafe in hopes of getting those lazy bums out of their cave. You may be wondering, "How did you get the rights to this?" And the answer to that is simple: we didn't. Please don't tell anyone.</h5>
-    </div>
-  </div>
-</div>
-
-<!-- Sixth Grid -->
-<div class="w3-row-padding w3-light-blue w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Robin's Wild Ride</h1>
-      <h5 class="w3-padding-32">I don't know HOW this got here, I don't know WHAT it does, and I don't know WHY it exists. We literally were making the park one day and then: bam! This thing shows up out of nowhere with some random guy in the booth. Even though it's run down, people can still (barely) ride it. Additionally, the man in the control booth is both irritable and unhelpful, often getting upset at people when they ask to ride, and frequently sending people on an accidental second lap of the ride. We can't even ask him to leave since the booth he is in is seemingly indestructible and he just shuts the door whenever somebody tries to talk to him. Only reason why he's still here is because the higher ups think we can market this as some "crazy mystery!" but honestly, this ride is doing more harm than good.</h5>
-    </div>
-
-    <div class="w3-third w3-center">
-          <img src= "./images/RobinsWildRide.jpg" 
-      style= "width:300px;height:450px;">
-    </div>
-  </div>
+<div id="faq">
+  <h1>Park Information</h1>
+  <ul>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Calendar & Hours</h2>
+      <p>We are open every day except holidays, from 8am to 12am. Nothing else happens during these hours.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Park Map & Directions</h2>
+      <p>This park isn't real, silly goose!</p>
+    </li>    
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Early Entry</h2>
+      <p>Free early entry for anybody who stays overnight!</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Trip tips</h2>
+      <p>This is in the area of Ohio known as, "Kind of close to Cleveland but not Cleveland." You're either less than 20 minutes away or not coming at all.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Mobile App</h2>
+      <p>Download our mobile app because the developers were too lazy to properly format the website to mobile. They were also too lazy to make the app, its 90% spyware.</p>
+    </li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Contact Us</h2>
+      <p>If you have any issues with our services, feel free to give us a call at XXX-XXX-XXXX WARNING: Number does not work after midnight.</p>
+    </li>
+    <li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Lost & Found</h2>
+      <p>Did you seriously leave your purse in this massive amusement park? Yeah, you're not getting it back, but you can visit lost and found in the main hub to disappoint yourself.</p>
+    </li>
+    <li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Accessibility</h2>
+      <p>We strive to make everyone feel as included as they would in the inevitable heat death of the universe. Many of our attractions come with features to accomidate to any guest's individual needs.</p>
+    </li>
+    <li>
+    <li>
+      <input type="checkbox" checked>
+      <i></i>
+      <h2>Code of Conduct</h2>
+      <p>Rule number one: be cool. Rule number two: don't drool. Rule number three: escape by midnight.</p>
+    </li>
+  </ul>
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge"></h1>
 </div>
+
 <script type="text/javascript">
     document.getElementById("Tp").onclick = function () {
         location.href = "localhost:8080/tickets";
@@ -169,3 +147,5 @@
 
 </body>
 </html>
+
+
