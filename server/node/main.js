@@ -12,7 +12,7 @@ dir = "../../";
 
 var db = mysql.createConnection({
     host: "localhost",
-    user: "googalake2",
+    user: "root",
     password: "",
     database: "amusement-park"
 });
@@ -32,7 +32,7 @@ function addUser(visitor_id, password, email) {
 
     new_id = max_id + 1;
 
-    new_user = "INSERT INTO userAccounts VALUES (" + new_id + ", " + visitor_id, + ", " + password, + ", " + email;
+    new_user = "INSERT INTO userAccounts VALUES (" + new_id + ", " + visitor_id + ", " + password, + ", " + email;
     
     db.query(new_user, function(err, result) {
         if (err) throw (err);
