@@ -12,7 +12,7 @@ dir = "../../";
 var db = mysql.createConnection({
     host: "localhost",
     user: "googalake2",
-    password: "pw12345"
+    password: ""
 });
 
 db.connect(function(err) {
