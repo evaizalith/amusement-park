@@ -1,12 +1,24 @@
 var http = require("http");
 var fs = require('fs');
 var url = require('url');
+var mysql = require('mysql');
 const express = require('express');
 
 const host = 'localhost';
 const port = 8080;
 
 dir = "../../";
+
+var db = mysql.createConnection({
+    host: "localhost",
+    user: "googalake2",
+    password: "pw12345"
+});
+
+db.connect(function(err) {
+    if(err) throw err;
+    console.log("Connected to database");
+});
 
 server = http.createServer((req, res) => {
     console.log(`Request received: ${req.url}, ${req.method}`);
