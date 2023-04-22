@@ -3,6 +3,7 @@ var fs = require('fs');
 var url = require('url');
 var mysql = require('mysql');
 const express = require('express');
+const { Hash } = require("crypto");
 
 const host = 'localhost';
 const port = 8080;
@@ -20,8 +21,28 @@ db.connect(function(err) {
     console.log("Connected to database");
 });
 
+function addUser(visitor_id, password, email) {
+    get_max = "SELECT max(user_id) FROM userAccounts";
+    max_id = db.query(get_max, function (err, result) {
+        if (err) throw (err);
+        console.log(result);
+        return result; 
+    });
+
+    new_id = max_id + 1;
+
+    new_user = "INSERT INTO userAccounts VALUES (" + new_id + ", " + visitor_id, + ", " + Hash(password), + ", " + email;
+    
+    db.query(new_user, function(err, result) {
+        if (err) throw (err);
+        console.log(result);
+    })
+}
+
 server = http.createServer((req, res) => {
     console.log(`Request received: ${req.url}, ${req.method}`);
+
+    addUser(12345, "password", "user@email.com");
 
     var path = url.parse(req.url).pathname;
     var fsCallback = function(error, data) {
