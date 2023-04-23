@@ -3,7 +3,6 @@ var fs = require('fs');
 var url = require('url');
 var mysql = require('mysql');
 const express = require('express');
-const { Hash } = require("crypto");
 
 const host = 'localhost';
 const port = 8080;
@@ -18,21 +17,19 @@ var db = mysql.createConnection({
 });
 
 db.connect(function(err) {
-    if(err) throw err;
+    if(err) throw (err);
     console.log("Connected to database");
 });
 
 function addUser(visitor_id, password, email) {
-    get_max = "SELECT max(user_id) FROM userAccounts";
-    max_id = JSON.stringify(db.query(get_max, function (err, result) {
-        if (err) throw (err);
-        console.log(result);
-        return result; 
-    }));
 
-    new_id = max_id + 1;
+    //Implement hashing later 
+    hash = password;
 
-    new_user = "INSERT INTO userAccounts VALUES (" + new_id + ", " + visitor_id + ", " + password, + ", " + email;
+    new_user = "INSERT INTO userAccounts (visitor_id, password, email) VALUES (" 
+    + visitor_id + ", "
+    + "\"" + hash + "\""  + ", " 
+    + "\"" + email + "\");";
     
     db.query(new_user, function(err, result) {
         if (err) throw (err);
