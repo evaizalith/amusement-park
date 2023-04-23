@@ -22,7 +22,6 @@ db.connect(function(err) {
 });
 
 function addUser(visitor_id, password, email) {
-
     //Implement hashing later 
     hash = password;
 
@@ -37,10 +36,23 @@ function addUser(visitor_id, password, email) {
     })
 }
 
+function addEmployee(emp_id, password, email) {
+    //Implement hashing later 
+    hash = password;
+
+    new_user = "INSERT INTO staffAccounts (emp_id, password, email) VALUES (" 
+    + emp_id + ", "
+    + "\"" + hash + "\""  + ", " 
+    + "\"" + email + "\");";
+    
+    db.query(new_user, function(err, result) {
+        if (err) throw (err);
+        console.log(result);
+    })
+}
+
 server = http.createServer((req, res) => {
     console.log(`Request received: ${req.url}, ${req.method}`);
-
-    addUser(12345, "password", "user@email.com");
 
     var path = url.parse(req.url).pathname;
     var fsCallback = function(error, data) {
