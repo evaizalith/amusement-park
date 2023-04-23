@@ -19,9 +19,9 @@
 <div class="w3-top">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card w3-large">
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <a id="Search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+    <a id="Cart" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
+    <a id="Login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
     
   </div>
 
@@ -31,11 +31,11 @@
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
-  <h1 class="w3-margin w3-jumbo">Geauga Lake 2</h1>
+  <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
   <p class="w3-xlarge">"If at first you don't succeed..."</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/TicketsPasses.html'">Tickets & Passes</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/ridesExperiences.html'">Rides & Experiences</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/parkInfo.html'">Park Information</button>
+  <button id="Tp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
+  <button id="Re" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
+  <button id="Pi" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
 </header>
 
 <!-- First Grid -->
@@ -58,7 +58,7 @@
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Enjoy "dozens" of rides and attractions!</h1>
-      <h5 class="w3-padding-32">Roller Coasters. Food. Drinks. An Arcade. These are the only things we have here. But when you think about it, aren't they the only things you need to have a good time? After all, there is no experience greater and more cherrished than time spent with close frien- oh you don't have any friends? Yikes. </h5>
+      <h5 class="w3-padding-32">Roller Coasters. Food. Drinks. An Arcade. These are the only things we have here. But when you think about it, aren't they the only things you need to have a good time? After all, there is no experience greater and more cherished than time spent with close frien- oh you don't have any friends? Yikes. </h5>
     </div>
 
     <div class="w3-third w3-center">
@@ -78,7 +78,7 @@
 
     <div class="w3-twothird">
       <h1>Sign up. Get more.</h1>
-      <h5 class="w3-padding-32">Pledge your enternal loyalty to us, and be richly rewarded. With discounts, coupons, tons and TONS of spam emails, and- most importantly- a slightly faster checkout! Enjoy all of these benefits and more until your credit card gets leaked nobody here knows anything about cybersecurity. </h5>
+      <h5 class="w3-padding-32">Pledge your enternal loyalty to us, and be richly rewarded. With discounts, coupons, tons and TONS of spam emails, and- most importantly- a slightly faster checkout! Enjoy all of these benefits and more (until your credit card gets leaked because nobody here knows anything about cybersecurity). </h5>
     </div>
   </div>
 </div>
@@ -86,6 +86,42 @@
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge"></h1>
 </div>
+
+<script type="text/javascript">
+    document.getElementById("Tp").onclick = function () {
+        location.href = "localhost:8080/tickets";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Re").onclick = function () {
+        location.href = "localhost:8080/rides";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Pi").onclick = function () {
+        location.href = "localhost:8080/info";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Login").onclick = function () {
+        location.href = "localhost:8080/login";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Cart").onclick = function () {
+        location.href = "localhost:8080/checkout";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Search").onclick = function () {
+        location.href = "localhost:8080/search;
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("home").onclick = function () {
+        location.href = "localhost:8080/";
+    };
+</script>
 
 </body>
 </html>

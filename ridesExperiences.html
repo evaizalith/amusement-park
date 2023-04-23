@@ -19,9 +19,9 @@
 <div class="w3-top">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card w3-large">
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+<a id="Search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+    <a id="Cart" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
+    <a id="Login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
     
   </div>
 
@@ -31,18 +31,18 @@
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
-  <h1 class="w3-margin w3-jumbo">Geauga Lake 2</h1>
-  <p class="w3-xlarge">"If at first you don't succeed..."</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/TicketsPasses.html'">Tickets & Passes</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/ridesExperiences.html'">Rides & Experiences</button>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location= 'https://geaugalake2.w3spaces.com/parkInfo.html'">Park Information</button>
+  <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
+  <p class="w3-xlarge">"Rides & Experiences"</p>
+  <button id="Tp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
+  <button id="Re" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
+  <button id="Pi" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding  w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-center">
-    <img src= "./images/jpg/GeaugaLakeIsReal.jpg" 
+    <img src= "./images/GeaugaLakeIsReal.jpg" 
       style= "width: 900px;height:600px;">
     </div>
 
@@ -72,13 +72,13 @@
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-    <img src= "./images/png/bastard.png" 
+    <img src= "./images/bastard.png" 
       style= "width:250px;height:300px;">
     </div>
 
     <div class="w3-twothird">
       <h1>Rampaging Reagan</h1>
-      <h5 class="w3-padding-32">This thrilling roller coaster features thrills, chills, and trickle down economics! Jump in a lightning-fast roller coaster car and run away from 40th United States President Ronald Reagan as fast as you can before he catches up to you and defunds your community!</h5>
+      <h5 class="w3-padding-32">This thrilling roller coaster features thrills, chills, and trickle down economics! Jump in a lightning-fast roller coaster car and run away from 40th United States President Ronald Reagan as fast as you can before he defunds your community!</h5>
     </div>
   </div>
 </div>
@@ -102,7 +102,7 @@
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-    <img src= "./images/jpg/mylifeislikeavideogame.jpg" 
+    <img src= "./images/mylifeislikeavideogame.jpg" 
       style= "width:250px;height:300px;">
     </div>
 
@@ -122,7 +122,7 @@
     </div>
 
     <div class="w3-third w3-center">
-          <img src= "./images/jpg/RobinsWildRide.jpg" 
+          <img src= "./images/RobinsWildRide.jpg" 
       style= "width:300px;height:450px;">
     </div>
   </div>
@@ -131,5 +131,41 @@
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge"></h1>
 </div>
+<script type="text/javascript">
+    document.getElementById("Tp").onclick = function () {
+        location.href = "localhost:8080/tickets";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Re").onclick = function () {
+        location.href = "localhost:8080/rides";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Pi").onclick = function () {
+        location.href = "localhost:8080/info";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Login").onclick = function () {
+        location.href = "localhost:8080/login";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Cart").onclick = function () {
+        location.href = "localhost:8080/checkout";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Search").onclick = function () {
+        location.href = "localhost:8080/search;
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("home").onclick = function () {
+        location.href = "localhost:8080/";
+    };
+</script>
+
 </body>
 </html>

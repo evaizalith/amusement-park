@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>W3.CSS Template</title>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./styles/searchBar.css">
+    <link rel="stylesheet" type="text/css" href=".styles/searchBar.css">
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -19,9 +19,9 @@
 <div class="w3-top">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card w3-large">
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
-    <a href="#" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+<a id="Search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+    <a id="Cart" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
+    <a id="Login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
     
   </div>
 
@@ -31,7 +31,7 @@
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
-  <h1 class="w3-margin w3-jumbo">Geauga Lake 2</h1>
+  <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
   <p class="w3-xlarge">Search</p>
       <!-- input tag -->
     <input id="searchbar" onkeyup="search_site()" type="text"
@@ -42,18 +42,46 @@
     <!-- ordered list -->
     <div class="w3-content">
     <div class="w3-center">
-        <h2 class="tab">Rides & Experiences</h2>
-        <h2 class="tab">Tickets & Passes</h2>
-        <h2 class="tab">Park Info</h2>
-        <h2 class="tab">Cart</h2>
-        <h2 class="tab">Login</h2>
-        <h2 class="tab">Home</h2>
-
-     
+        <h2 id="Re" class="tab">Rides & Experiences</h2>
+        <h2 id="Tp" class="tab">Tickets & Passes</h2>
+        <h2 id="Pi" class="tab">Park Info</h2>
+        <h2 id="Cart" class="tab">Cart</h2>
+        <h2 id="Login" class="tab">Login</h2>
+        <h2 id="Home" class="tab">Home</h2>
     </div>
   </div>
 
-      
+<script type="text/javascript">
+    document.getElementById("Tp").onclick = function () {
+        location.href = "localhost:8080/tickets";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Re").onclick = function () {
+        location.href = "localhost:8080/rides";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Pi").onclick = function () {
+        location.href = "localhost:8080/info";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Login").onclick = function () {
+        location.href = "localhost:8080/login";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("Cart").onclick = function () {
+        location.href = "localhost:8080/checkout";
+    };
+</script>
+<script type="text/javascript">
+    document.getElementById("home").onclick = function () {
+        location.href = "localhost:8080/";
+    };
+</script>
+</script>
     <!-- linking javascript -->
     <script src="./searchbar.js"></script>
 </body>
