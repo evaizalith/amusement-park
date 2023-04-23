@@ -21,9 +21,9 @@
 <div class="w3-top">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card w3-large">
-    <a id="Search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
-    <a id="Cart" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
-    <a id="Login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <a href="localhost:8080/search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+    <a href="localhost:8080/checkout" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Cart</a>
+    <a href="localhost:8080/login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
     
   </div>
 
@@ -33,11 +33,11 @@
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
-  <h1 id="home" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
+  <h1 href="localhost:8080/" class="w3-margin w3-jumbo">Geauga Lake 2</h1>
   <p style="color:white" class="w3-xlarge">"Checkout"</p>
-  <button id="Tp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
-  <button id="Re" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
-  <button id="Pi" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
+  <button href="localhost:8080/tickets" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Tickets & Passes</button>
+  <button href="localhost:8080/rides" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Rides & Experiences</button>
+  <button href="localhost:8080/info" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Park Information</button>
 </header>
 
 <div class="container">
@@ -66,79 +66,79 @@
       <div class="layout-inline row">
         
         <div class="col col-pro layout-inline">
-          <img src="./images/bastard.png" alt="kitten" />
-          <p>40th President Ronald Reagan</p>
+          <img src="./images/png/Ticket.png" style= "width:100px;height:100px;"/>
+          <p>Fast Pass</p>
         </div>
         
         <div class="col col-price col-numeric align-center ">
-          <p>$59.99</p>
+          <p>$99.99</p>
         </div>
 
         <div class="col col-qty layout-inline">
           <a href="#" class="qty qty-minus">-</a>
-            <input type="numeric" value="3" />
+            <input type="numeric" value="1" />
           <a href="#" class="qty qty-plus">+</a>
         </div>
         <div class="col col-Digital col-numeric">
           <p>Yes</p>
         </div>
         <div class="col col-total col-numeric">               
-          <p>$179.97</p>
+          <p>$99.99</p>
         </div>
       </div>
       
       <div class="layout-inline row">
         
         <div class="col col-pro layout-inline">
-          <img src="./images/bastard.png" alt="kitten" />
-          <p>40th President Ronald Reagan</p>
+          <img src="./images/png/Ticket.png" style= "width:100px;height:100px;" />
+          <p>Basic Pass Sale</p>
         </div>
         
         <div class="col col-price col-numeric align-center ">
-          <p>$59.99</p>
+          <p>$149.98</p>
         </div>
 
         <div class="col col-qty layout-inline">
           <a href="#" class="qty qty-minus">-</a>
-            <input type="numeric" value="3" />
+            <input type="numeric" value="1" />
           <a href="#" class="qty qty-plus">+</a>
         </div>
         <div class="col col-Digital col-numeric">
           <p>Yes</p>
         </div>
         <div class="col col-total col-numeric">               
-          <p>$179.97</p>
+          <p>$149.98</p>
         </div>
       </div>
       
         <div class="layout-inline row">
         
         <div class="col col-pro layout-inline">
-          <img src="./images/bastard.png" alt="kitten" />
-          <p>40th President Ronald Reagan</p>
+          <img src="./images/png/Ticket.png" style= "width:100px;height100px;" />
+          <p>Arcade Pass</p>
         </div>
         
         <div class="col col-price col-numeric align-center ">
-          <p>$59.99</p>
+          <p>$99.99</p>
         </div>
 
         <div class="col col-qty layout-inline">
           <a href="#" class="qty qty-minus">-</a>
-            <input type="numeric" value="3" />
+            <input type="numeric" value="2" />
           <a href="#" class="qty qty-plus">+</a>
         </div>
         <div class="col col-Digital col-numeric">
           <p>Yes</p>
         </div>
         <div class="col col-total col-numeric">               
-          <p>$179.97</p>
+          <p>$199.98</p>
         </div>
       </div>
   
        <div class="tf">
          <div class="row layout-inline">
            <div class="col-total">
-             <p style= "color:white">Total: $539.91</p>
+             <p style= "color:white">Total: $449.95</p>
            </div>
            <div class="col-total"></div>
          </div>
@@ -150,39 +150,4 @@
 
    <a href="#" class="btn btn-update">Checkout</a>
 
-<script type="text/javascript">
-    document.getElementById("Tp").onclick = function () {
-        location.href = "localhost:8080/tickets";
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("Re").onclick = function () {
-        location.href = "localhost:8080/rides";
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("Pi").onclick = function () {
-        location.href = "localhost:8080/info";
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("Login").onclick = function () {
-        location.href = "localhost:8080/login";
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("Cart").onclick = function () {
-        location.href = "localhost:8080/checkout";
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("Search").onclick = function () {
-        location.href = "localhost:8080/search;
-    };
-</script>
-<script type="text/javascript">
-    document.getElementById("home").onclick = function () {
-        location.href = "localhost:8080/";
-    };
-</script>
 </body>
