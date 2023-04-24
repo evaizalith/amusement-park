@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+import math
 
 conn = None
 try:
@@ -9,6 +10,13 @@ try:
                                        password='')
     if conn.is_connected():
         print('Connected to MySQL database')
+
+        cursor = conn.cursor()
+        
+        for i in range(7):
+            visitors = 500 + math.e**i
+            time = "INSERT INTO time VALUES(\"04-" + (17 + i) + "-2024\", 5, " + visitors + "," + visitors * 150 + ");"
+            cursor.execute(time)
 
 except Error as err:
     print(err)
