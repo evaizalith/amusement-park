@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Staff Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+      .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+
+
+/* Body styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #2196f3;
+  color: white;
+  font-size: 30px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+}
+
+h1.staff-login {
+  color: #000;
+  font-size: 38px;
+}
+
+/* Form styles */
+form {
+  margin: 50px auto;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 18px;
+}
+
+.footer {
+  position:flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #054dba;
+  color: #fff;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1351ad;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="w3-top">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <div class="w3-bar w3-black w3-card w3-large">
+      <a href="/search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+      <a href="/login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+      
+      </div>
+    </div>
+  
+    <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
+      <h1 class="w3-margin w3-jumbo"><a href="/">Geauga Lake 2</a></h1>
+      <p style="color:white" class="w3-xlarge">Staff Login</p>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/dashboard">Dashboard</a></button>
+       <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/schedules">Schedules</a></button>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/parkinfo">Park Information & Documentation</a></button>
+      </header>
+
+
+  
+    <form action="action_page.php" method="post">
+      <div class="container">
+<label for="uname"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="button" class="loginbtn">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button id="signup" type="button" class="signupbtn">Sign up</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+
+<div class="footer">
+  <p>Geauge Lake 2 Amusement Park</p>
+  </div>
+</body>
+</html>

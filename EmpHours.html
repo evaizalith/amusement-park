@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Schedule</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+
+        body {
+			font-family: 'Montserrat';
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+		}
+
+		.header {
+			padding: 60px;
+			text-align: center;
+			background: #2196f3;
+			color: white;
+			font-size: 30px;
+		}
+
+		.header h1{
+			font-family: 'Montserrat';
+			font-size: 60px;
+		}
+
+		h1{
+			font-family: 'Montserrat';
+			font-size: 60px;
+		}
+
+		.tabs {
+		  text-align: center;
+		}
+
+		.tablinks {
+		  background-color: #000000;
+		  border: none;
+		  color: #f2f2f2;
+		  padding: 14px 16px;
+		  font-size: 12px;
+		  cursor: pointer;
+		}
+
+		.tabcontent {
+		  display: none;
+		  padding: 6px 12px;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+
+		.tabcontent:first-child {
+		  display: block;
+		}
+
+		.personal-schedule {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .personal-schedule h2 {
+		font-family: 'Montserrat';
+        margin-top: 0;
+      }
+
+	  .personal-schedule p {
+		font-family: 'Montserrat';
+		margin-top: 0;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+		font-size: 25px;
+
+      }
+
+      .personal-schedule ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .personal-schedule li {
+        margin-bottom: 10px;
+      }
+
+		.everyone-schedule {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+
+      .everyone-schedule h2 {
+		font-family: 'Montserrat';
+        margin-top: 0;
+      }
+
+      .everyone-schedule table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .everyone-schedule th, .everyone-schedule td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+	  .trade-board {
+		font-family: 'Montserrat';
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .trade-board h2 {
+		font-family: 'Montserrat';
+        margin-top: 0;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+      }
+
+	  .trade-board p {
+        margin-top: 0;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+      }
+
+      .trade-board table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .trade-schedule th, .trade-schedule td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+	  .footer {
+		position:flex;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #054dba;
+		color: #fff;
+		text-align: center;
+		}
+
+		
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="w3-top">
+		<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<div class="w3-bar w3-black w3-card w3-large">
+		<a href="/search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+		<a href="/login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+		
+	  </div>
+	</div>
+
+	<header class="w3-container w3-blue w3-center" style="padding:32px 4px">
+		<h1 class="w3-margin w3-jumbo"><a href="/">Geauga Lake 2</a></h1>
+		<p style="color:white" class="w3-xlarge">Employee Schedule</p>
+		<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/dashboard">Dashboard</a></button>
+	   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/schedules">Schedules</a></button>
+		<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="/parkinfo">Park Information & Documentation</a></button>
+	  </header>
+
+
+	<div class="tabs">
+		<button class="tablinks" onclick="openTab(event, 'My Schedule')">My Schedule</button>
+		<button class="tablinks" onclick="openTab(event, 'Everyones Schedule')">Everyone's Schedule</button>
+		<button class="tablinks" onclick="openTab(event, 'Tradeboard')">Tradeboard</button>
+
+		<div id="My Schedule" class="tabcontent">
+			<div class="personal-schedule"> <div class="everyone-schedule">
+			<h2>Lily Rose's Schedule</h2>
+			<p>Table of hours</p>
+			<table>
+				<thead>
+				  <tr>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>9am-12pm</td>
+					<td>---</td>
+					<td>9am-12pm</td>
+					<td>9am-12pm</td>
+					<td>9am-12pm</td>
+				  </tr>
+				</tbody>
+			</table>
+			</div>
+		</div>
+		</div>
+
+	
+
+		<div id="Everyones Schedule" class="tabcontent">
+			<div class="everyone-schedule"> 
+			<h2>Everyone's Schedule</h2>
+			<p>Ride Operators</p>
+			<table>
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Allen</td>
+					<td>9am-12pm</td>
+					<td>8am-12pm</td>
+					<td>10am-12pm</td>
+					<td>9am-12pm</td>
+					<td>8am-12pm</td>
+				  </tr>
+				  <tr>
+					<td>Brodie</td>
+					<td>8am-12pm</td>
+					<td>8am-12pm</td>
+					<td>8am-12pm</td>
+					<td>8am-12pm</td>
+					<td></td>
+				  </tr>
+				  <tr>
+					<td>Lily</td>
+					<td>9am-12pm</td>
+					<td></td>
+					<td>9am-12pm</td>
+					<td>9am-12pm</td>
+					<td>9am-12pm</td>
+				  </tr>
+				</tbody>
+		</table>
+		</div>
+
+		<div class="everyone-schedule">
+		<p>Food Service</p>
+		<table>
+			<thead>
+			  <tr>
+				<th>Name</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Alfred</td>
+				<td>8am-10am</td>
+				<td>8am-10am</td>
+				<td>8am-10am</td>
+				<td>8am-10am</td>
+				<td>8am-10am</td>
+			  </tr>
+			  <tr>
+				<td>Beorn</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+				<td></td>
+				<td>9am-12pm</td>
+			  </tr>
+			  <tr>
+				<td>Leofwine</td>
+				<td>9am-12pm</td>
+				<td></td>
+				<td></td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+			  </tr>
+			  <tr>
+				<td>Siward</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+				<td>9am-12pm</td>
+			  </tr>
+			</tbody>
+	</table>
+	</div>
+
+	<div class="everyone-schedule">
+		<p>Retail Sales</p>
+		<table>
+			<thead>
+			  <tr>
+				<th>Name</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Harold</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+			  </tr>
+			  <tr>
+				<td>Edith</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+			  </tr>
+			  <tr>
+				<td>Ymma</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+				<td>8am-12pm</td>
+			  </tr>
+			</tbody>
+	</table>
+	</div>
+
+		</div>
+		</div>
+
+		<div id="Tradeboard" class="tabcontent">
+			<div class="trade-board"><div class="everyone-schedule"> 
+			  <h2>Tradeboard</h2>
+			  <p>Tradeboard for Employees Preferred Hours</p>
+		  
+			  <table>
+				<thead>
+				  <tr>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Position</th>
+					<th>Scheduled Employee</th>
+					<th>Shift Preferences</th>
+					<th>Availability</th>
+					<th>Contact Information</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>4/20/2069</td>
+					<td>9:00am</td>
+					<td>Ride Operators</td>
+					<td>Lily</td>
+					<td>8am-12pm</td>
+					<td>Anytime</td>
+					<td>lilrose@hotmail.com</td>
+				  </tr>
+				  <tr>
+					<td>11/21/2069</td>
+					<td>8am-12pm</td>
+					<td>Retail Sales</td>
+					<td>Edith</td>
+					<td>10am-12pm</td>
+					<td>Anytime</td>
+					<td>eidththmith@hotmail.com</td>
+				  </tr>
+				  <tr>
+					<td>11/21/2069</td>
+					<td>9am-12pm</td>
+					<td>Food Service</td>
+					<td>Siward</td>
+					<td>Time Off</td>
+					<td>None</td>
+					<td>handsomesiward@yahoo.com</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		  
+	</div>
+
+	<script>
+		function openTab(evt, tabName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(tabName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+
+		document.getElementsByClassName("tablinks")[0].click();
+	</script>
+
+
+
+
+<div class="footer">
+	<p>Geauge Lake 2 Amusement Park</p>
+  </div>
+
+</body>
+</html>
