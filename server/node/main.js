@@ -79,13 +79,28 @@ server = http.createServer((req, res) => {
             file += "login.html";
             break;
         case '/rides':
-            file += "ridesExperience.html";
+            file += "ridesExperiences.html";
             break;
         case '/signup':
             file += "signup.html";
             break;
         case '/tickets':
             file += "ticketsPasses.html";
+            break;
+        case '/search':
+            file += "Search.html";
+            break;
+        case '/staff-info':
+            file += "staffInfo.html";
+            break;
+        case '/dashboard':
+            file += "staffhomepage.html";
+            break;
+        case '/staff-login':
+            file += "staffsignin.html";
+            break;
+        case '/schedules':
+            file += "EmpHours.html";
             break;
         default:
             file += "404.html";
