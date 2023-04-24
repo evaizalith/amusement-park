@@ -15,7 +15,7 @@ try:
         
         for i in range(7):
             visitors = 500 + math.e**i
-            time = "INSERT INTO time VALUES(\"04-" + (17 + i) + "-2024\", 5, " + visitors + "," + visitors * 150 + ");"
+            time = f"INSERT INTO time VALUES(\"04-{17 + i}-2024\", 5, {visitors}, {visitors * 150}\");"
             cursor.execute(time)
 
 except Error as err:
