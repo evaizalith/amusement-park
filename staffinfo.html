@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Staff Park Information & Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* Body styles */
+      body {
+        font-family: 'Montserrat';
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+  
+      /* Header/Logo Title */
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: #2196f3;
+        color: white;
+        font-size: 30px;
+      }
+  
+      /* Heading styles */
+      h1 {
+        font-family: 'Montserrat';
+        text-align: center;
+        color: #fff;
+        margin-top: 50px;
+      }
+  
+      h1.staff-login {
+        color: rgb(0, 0, 0);
+        font-size: 38px;
+      }
+  
+      /* Form styles */
+      form {
+        margin: 50px auto;
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      label {
+        font-size: 18px;
+      }
+  
+      .footer {
+        position:flex;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #054dba;
+        color: #fff;
+        text-align: center;
+      }
+  
+      .input-container {
+        display: flex;
+        flex-direction: column;
+          align-items: center;
+      }
+  
+      input[type="text"],
+      input[type="password"] {
+         display: block;
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 10px;
+         font-size: 18px;
+         border: none;
+          border-radius: 3px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+  
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 3px;
+        background-color: #2196f3;
+        color: #fff;
+        cursor: pointer;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: #1351ad;
+      }
+
+      h3 {
+        font-size: 24px;
+        text-align: center;
+        font-family: 'Montserrat';
+        margin: 20px 0;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      a {
+        color: #007bff;
+        text-align: center;
+        text-decoration: none;
+      }
+
+
+
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <div class="w3-top">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <div class="w3-bar w3-black w3-card w3-large">
+      <a href="/search" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Search</a>
+      <a href="/login" class="w3-bar-item w3-right w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+      
+      </div>
+    </div>
+  
+    <header class="w3-container w3-blue w3-center" style="padding:32px 4px">
+      <h1 class="w3-margin w3-jumbo"><a style="color:white" href="/">Geauga Lake 2</a></h1>
+      <p style="color:white" class="w3-xlarge">Staff Park Information & Documentation</p>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a style="color:white" href="/dashboard">Dashboard</a></button>
+       <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a style="color:white" href="/schedules">Schedules</a></button>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a style="color:white" href="/parkinfo">Park Information & Documentation</a></button>
+      </header>
+
+
+    <p>Welcome to the staff documentation page. This page contains important information for staff members.</p>
+    <h3>Employee Handbook</h3>
+    <p>Our employee handbook is available for download <a href="employee-handbook.pdf">here</a>.</p>
+    <h3>Training Materials</h3>
+    <p>We offer a variety of training materials for our staff. You can access them <a href="training-materials.html">here</a>.</p>
+    <h3>Company Policies</h3>
+    <p>Our company policies are available for download <a href="company-policies.pdf">here</a>.</p>
+    <h3>Forms and Templates</h3>
+    <p>We have a collection of forms and templates for staff use. You can access them <a href="forms-templates.html">here</a>.</p>
+    <h3>Contact Us</h3>
+    <p>If you have any questions or concerns, please feel free to <a href="contact.html">contact us</a>.</p>
+
+
+
+      <script type="text/javascript">
+        document.getElementById("db").onclick = function () {
+            location.href = "localhost:8080/dashboard";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("sh").onclick = function () {
+            location.href = "localhost:8080/schedules";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("pid").onclick = function () {
+            location.href = "localhost:8080/parkinfo";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("Login").onclick = function () {
+            location.href = "localhost:8080/login";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("Search").onclick = function () {
+            location.href = "localhost:8080/search";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            location.href = "localhost:8080/";
+        };
+    </script>
+    <script type="text/javascript">
+        document.getElementById("signup").onclick = function () {
+            location.href = "localhost:8080/signup";
+        };
+    </script>
+    
+    <div class="footer">
+      <p>Geauge Lake 2 Amusement Park</p>
+      </div>
+
+
+  </body>
+</html>
