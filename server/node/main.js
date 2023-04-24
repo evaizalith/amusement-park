@@ -117,8 +117,8 @@ server = http.createServer((req, res) => {
         case '/images/jpg/mylifeislikeavideogame.jpg':
             file += "/images/jpg/mylifeislikeavideogame.jpg";
             break;
-        case 'http://localhost:8080/images/jpg/RobinsWildRide.jpg':
-            file += "http://localhost:8080/images/jpg/RobinsWildRide.jpg";
+        case '/images/jpg/RobinsWildRide.jpg':
+            file += "/images/jpg/RobinsWildRide.jpg";
             break;
         case '/images/jpg/ferris_wheel.jpg':
             file += "/images/jpg/ferris wheel.jpg";
@@ -129,8 +129,8 @@ server = http.createServer((req, res) => {
         case '/styles/Accordion.css':
             file += "/styles/Accordion.css";
             break;
-        case '/styles/card.css':
-            file += '/styles/card.css';
+        case '/styles/Card.css':
+            file += '/styles/Card.css';
             break;
         case '/styles/checkout.css':
             file += '/styles/checkout.css';
@@ -140,6 +140,9 @@ server = http.createServer((req, res) => {
             break;
         case '/styles/searchBar.css':
             file += '/styles/searchBar.css';
+            break;
+        case '/searchBar.js':
+            file += '/searchBar.js';
             break;
         default:
             file += "404.html";
