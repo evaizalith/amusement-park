@@ -79,13 +79,70 @@ server = http.createServer((req, res) => {
             file += "login.html";
             break;
         case '/rides':
-            file += "ridesExperience.html";
+            file += "ridesExperiences.html";
             break;
         case '/signup':
             file += "signup.html";
             break;
         case '/tickets':
             file += "ticketsPasses.html";
+            break;
+        case '/search':
+            file += "Search.html";
+            break;
+        case '/staff-info':
+            file += "staffInfo.html";
+            break;
+        case '/dashboard':
+            file += "staffhomepage.html";
+            break;
+        case '/staff-login':
+            file += "staffsignin.html";
+            break;
+        case '/schedules':
+            file += "EmpHours.html";
+            break;
+        case '/images/jpg/GeaugaLakeIsReal.jpg':
+            file += "images/jpg/GeaugaLakeIsReal.jpg";
+            break;
+        case '/images/jpg/redRollerCoaster.jpg':
+            file += "/images/jpg/redRollerCoaster.jpg";
+            break;
+        case '/images/png/bastard.png':
+            file += "/images/png/bastard.png";
+            break;
+        case '/images/png/Arcade.png':
+            file += "/images/png/Arcade.png";
+            break;
+        case '/images/jpg/mylifeislikeavideogame.jpg':
+            file += "/images/jpg/mylifeislikeavideogame.jpg";
+            break;
+        case '/images/jpg/RobinsWildRide.jpg':
+            file += "/images/jpg/RobinsWildRide.jpg";
+            break;
+        case '/images/jpg/ferris_wheel.jpg':
+            file += "/images/jpg/ferris wheel.jpg";
+            break;
+        case '/images/jpg/contract.jpg':
+            file += "/images/jpg/contract.jpg";
+            break;
+        case '/styles/Accordion.css':
+            file += "/styles/Accordion.css";
+            break;
+        case '/styles/Card.css':
+            file += '/styles/Card.css';
+            break;
+        case '/styles/checkout.css':
+            file += '/styles/checkout.css';
+            break;
+        case '/styles/login.css':
+            file += '/styles/login.css';
+            break;
+        case '/styles/searchBar.css':
+            file += '/styles/searchBar.css';
+            break;
+        case '/searchBar.js':
+            file += '/searchBar.js';
             break;
         default:
             file += "404.html";
