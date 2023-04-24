@@ -103,7 +103,7 @@ server = http.createServer((req, res) => {
             file += "EmpHours.html";
             break;
         case '/management':
-            file += "managerHomepage.html";
+            file += "managerhomepage.html";
             break;
         case '/images/jpg/GeaugaLakeIsReal.jpg':
             file += "images/jpg/GeaugaLakeIsReal.jpg";
